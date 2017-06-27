@@ -3,6 +3,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+
 import static java.lang.Math.sqrt;
 
 public class CellBtn extends StackPane {
@@ -84,10 +85,12 @@ public class CellBtn extends StackPane {
     }
 
     void Open(boolean primary, boolean secondary) {
-        if (primary) //&& cell.Open())
+        if (primary) {//&& cell.Open())
             //cell.state = CellState.opened;
-            if (secondary)
-                cell.state = CellState.marked;
+        }
+        if (secondary) {
+            cell.state = CellState.marked;
+        }
         main.field.cells[cell.x][cell.y] = cell;
     }
 
